@@ -26,4 +26,5 @@ def returns_files_with_extensions(paths: str, file_extension: str):
                 print(files)
 
 
-returns_files_with_extensions(__paths, __file_extension)
+if __name__ == "__main__":
+    returns_files_with_extensions(__paths, __file_extension)
