@@ -17,7 +17,7 @@ if [ ! -d "$directory" ]; then
 fi
 
 # Find files that contain the specified text
-found_files=$(grep -rl "$search_text")
+found_files=$(grep -rl "$search_text" "$directory")
 
 if [ -z "$found_files" ]; then
     echo "Файли, що містять текст '$search_text', не знайдено у директорії '$directory'."
