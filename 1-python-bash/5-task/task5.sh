@@ -3,7 +3,7 @@
 # Check the number of passed arguments
 if [ "$#" -ne 2 ]; then
 	echo "Використання: $0 <шлях_до_директорії> <розширення_файлів>"
-	wxit 1
+	exit 1
 fi
 
 # Get arguments
