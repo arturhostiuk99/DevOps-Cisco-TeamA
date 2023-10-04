@@ -20,10 +20,11 @@ def check_if_config_file_is_empty():
     """We check whether at least one of the arguments is empty"""
     if check_if_config_file_exist():
         with open('Config.txt', 'r') as config_file:
-            data = config_file.read().splitlines()
-            if data[0] == '' or data[1] == '':
+            data = config_file.read()
+            arguments = data.split('\n')
+            if data == '' or arguments[0] == '' or arguments[1] == '':
                 print(
-                    'Config file is empty. The file will automatically be filled with the path to this directory and file extension ".txt"')
+                    'Config file is empty or missing arguments. The file will automatically be filled with the path to this directory and file extension ".txt"')
                 current_file = os.path.realpath(__file__)
                 current_directory = os.path.dirname(current_file)
                 with open('Config.txt', 'w') as config_file:
@@ -56,9 +57,10 @@ def returns_files_with_extensions():
     if check_if_path_exist():
         paths = check_if_path_exist()[0]
         file_extension = check_if_path_exist()[1]
+        print('The given path: {} \nThe given file extension: {}'.format(paths, file_extension))
         for files in os.listdir(paths):  # function os.listdir return only file names in final specified directory
             if files.endswith(file_extension):  # function endswith compares latest values of objects
-                print(files)
+                print('The file name: {}'.format(files))
 
 
 if __name__ == "__main__":
