@@ -1,6 +1,4 @@
-# DevOps-Cisco-TeamA
-
-# Task #7 BASH - File Counter Bash Script
+# File Counter Bash Script - Task #7 BASH 
 
 This Bash script accepts a directory path and a file extension as arguments and returns the number of files with the specified extension in the given directory.
 
@@ -25,3 +23,4 @@ For example, to count the number of .txt files in the ~/softserve-academy direct
 ./file-counter-task7.sh ~/softserve-academy txt
 ```
 The script will display the number of files with the specified extension in the directory.
+
