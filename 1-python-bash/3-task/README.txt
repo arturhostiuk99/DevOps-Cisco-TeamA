@@ -1,3 +1,3 @@
-At first input path to final directory
-The Second input file extension that you wat to count
-Then get numbers of files with specified extension in final directory
+All configurations in Config.txt file.
+First line is path
+The Second line is file extension
