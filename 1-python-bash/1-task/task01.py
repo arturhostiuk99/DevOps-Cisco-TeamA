@@ -22,7 +22,7 @@ def check_if_config_file_is_empty():
         with open('Config.txt', 'r') as config_file:
             data = config_file.read()
             arguments = data.split('\n')
-            if data == '' or arguments[0] == '' or arguments[1] == '':
+            if data == '' or len(arguments) != 2 or arguments[0] == '' or arguments[1] == '':
                 print(
                     'Config file is empty or missing arguments. The file will automatically be filled with the path to this directory and file extension ".txt"')
                 current_file = os.path.realpath(__file__)
