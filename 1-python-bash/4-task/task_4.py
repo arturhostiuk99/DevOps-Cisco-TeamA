@@ -29,7 +29,8 @@ def return_files(preset_path, search_string):
     """This function searches the directories that are in the path,
     searches all files and checks whether the given line is present in the file"""
     files = []
-        def list_files(list_files, files):
+    
+    def list_files(list_files, files):
         try:
             with open(list_files, 'r') as f:
                 if search_string in f.read():
