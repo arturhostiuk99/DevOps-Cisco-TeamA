@@ -1,4 +1,5 @@
 import tomllib
+import sys
 import os
 
 FILE_NAME = 'test.toml'
@@ -17,7 +18,7 @@ def read_toml_file(file):
         return data
     except Exception as e:
         print("Can't read a file \n{}".format(e))
-        return dict()
+        sys.exit()
 
 
 def main():
