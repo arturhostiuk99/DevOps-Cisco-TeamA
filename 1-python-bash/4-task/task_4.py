@@ -29,23 +29,20 @@ def return_files(preset_path, search_string):
     """This function searches the directories that are in the path,
     searches all files and checks whether the given line is present in the file"""
     files = []
+        def list_files(list_files, files):
+        try:
+            with open(list_files, 'r') as f:
+                if search_string in f.read():
+                    files.append(list_files)
+        except Exception as e:
+            return f'Error reading file {list_files}: {str(e)}'
     if os.path.isdir(preset_path):
         for dir_path, dir_names, filenames in os.walk(preset_path):
             for filename in filenames:
                 file_path = os.path.join(dir_path, filename)
-                try:
-                    with open(file_path, 'r') as f:
-                        if search_string in f.read():
-                              files.append(file_path)
-                except Exception as e:
-                    return f'Error reading file {file_path}: {str(e)}'
+                list_files(file_path,files)
     elif os.path.isfile(preset_path):
-        try:
-            with open(preset_path, 'r') as f:
-                if search_string in f.read():
-                   return preset_path
-        except Exception as e:
-            return f'Error reading file {preset_path}: {str(e)}'
+        list_files(preset_path,files)
     return print(files)
 
 
