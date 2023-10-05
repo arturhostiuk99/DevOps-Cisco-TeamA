@@ -17,7 +17,7 @@ def read_toml_file(file):
         return data
     except Exception as e:
         print("Can't read a file \n{}".format(e))
-        return None
+        return dict()
 
 
 def main():
