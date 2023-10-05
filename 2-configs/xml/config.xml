@@ -1,0 +1,30 @@
+<users>
+    <user>
+        <username>user1</username>
+        <password>password1</password>
+        <email>user1@example.com</email>
+    </user>
+    <user>
+        <username>user2</username>
+        <password>password2</password>
+        <email>user2@example.com</email>
+    </user>
+    <user>
+        <username>user3</username>
+        <password>password3</password>
+        <email>user3@example.com</email>
+    </user>
+    <user>
+        <username>user4</username>
+        <password>password4</password>
+        <email>user4@example.com</email>
+    </user>
+    <user>
+        <username>user5</username>
+        <password>password5</password>
+        <email>user5@example.com</email>
+    </user>
+    <user>
+        <password>password6</password>
+    </user>
+</users>
