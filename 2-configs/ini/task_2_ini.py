@@ -7,10 +7,8 @@ search_key = 'password'
 
 
 def exist_ini(exists_ini):
-    if os.path.exists(exists_ini):
-        search_pass(exists_ini, search_key)
-    else:
-        return print(f'file .ini doesnt not exists')
+    if not os.path.exists(exists_ini):
+        return True
 
 
 def search_pass(file_ini, param):
@@ -25,5 +23,10 @@ def search_pass(file_ini, param):
     return print(passwords)
 
 
-exist_ini(path_to_ini)
+def run_script():
+    if exist_ini(path_to_ini):
+        return print(f'{path_to_ini} doesnt not exists')
+    search_pass(path_to_ini, search_key)
 
+
+run_script()
