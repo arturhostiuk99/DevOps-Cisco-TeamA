@@ -18,5 +18,6 @@ def main():
                 for name, password in value.items():
                     print(password)
 
-if __name__=="__main__":
+
+if __name__ == "__main__":
     main()
