@@ -2,13 +2,8 @@ import configparser
 import os
 
 
-path_to_ini = 'config.ini'
-search_key = 'password'
-
-
-def exist_ini(exists_ini):
-    if not os.path.exists(exists_ini):
-        return True
+PATH_TO_INI = 'config.ini'
+SEARCH_KEY = 'password'
 
 
 def search_pass(file_ini, param):
@@ -24,9 +19,9 @@ def search_pass(file_ini, param):
 
 
 def run_script():
-    if exist_ini(path_to_ini):
-        return print(f'{path_to_ini} doesnt not exists')
-    search_pass(path_to_ini, search_key)
+    if not os.path.exists(PATH_TO_INI):
+        return print(f'{PATH_TO_INI} doesnt not exists')
+    search_pass(PATH_TO_INI, SEARCH_KEY)
 
 
 run_script()
